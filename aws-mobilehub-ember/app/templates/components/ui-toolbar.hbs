@@ -1,0 +1,44 @@
+
+<header class="mdc-toolbar mdc-toolbar--fixed accent">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      {{#link-to "home"}}
+        <div class="logo"></div>
+      {{/link-to}}
+      <span class="mdc-toolbar__title hidden-mobile">
+        TMoney
+      </span>
+  {{#if authentication.authenticated}}
+    {{#link-to "main-page"}}
+    <button class="btn btn-primary" type="submit">Stock</button>
+    {{/link-to}}
+    {{#link-to "home"}}
+    <button class="btn btn-success" type="submit">Note</button>
+    {{/link-to}}
+    {{#link-to "payment"}}
+    <button class="btn btn-danger" type="submit">Deposit</button>
+    {{/link-to}}
+    {{#link-to "payment"}}
+    <button class="btn btn-info" type="submit">Withdraw</button>
+    {{/link-to}}
+    {{/if}}
+    </section>
+    <section>
+      <form class="form-inline my-2 my-lg-0">
+          {{input value=stock id="search-stock" placeholder="stock"}}
+          <button class="new-answer-btn" {{action 'search'}}>Search</button>
+         <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">         
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+      </form>
+    </section>
+    {{#if authentication.authenticated}}
+	    <section class="mdc-toolbar__section mdc-toolbar__section--align-end">
+        <div class="text-welcome">Hello, {{#link-to "account"}} {{cognito.user.username}} {{/link-to}}</div>
+	      <button class="mdc-button mdc-button--accent" {{action "logout"}}>Logout</button>
+	    </section>
+    {{/if}}
+  </div>
+</header>
+<main class="main mdc-toolbar-fixed-adjust">
+	{{yield}}
+</main>

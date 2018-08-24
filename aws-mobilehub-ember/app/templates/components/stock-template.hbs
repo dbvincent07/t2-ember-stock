@@ -1,0 +1,74 @@
+<div class="jumbotron">
+  <center>
+    <div class="row">
+      <div class="col-12">
+        <h2><strong>{{symbol}}</strong></h2>
+      </div>
+      <div class="col-12"> {{companyName}}</div>
+    </div>
+    <br>
+    <div class="row justify-content-center">
+      <div class="col-6 col-md-4">BID
+        <br>
+        <h5>${{iexBidPrice}}
+          <br> X {{iexBidSize}}</h5>
+      </div>
+      <div class="col-6 col-md-4">LAST TRADED PRICE
+        <br>
+        <h1>${{latestPrice}} </h1>
+        <h5>{{change}}</h5>
+      </div>
+      <div class="col-6 col-md-4">OFFER
+        <br>
+        <h5>${{iexAskPrice}}
+          <br> X {{iexAskSize}}</h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-md-4">{{primaryExchange}}</div>
+      <div class="col-6 col-md-4">{{primaryExchange}}</div>
+      <div class="col-6 col-md-4">{{primaryExchange}}</div>
+    </div>
+    <br>
+    <div class="form-row">
+      <div class="col form-group">
+        <label><strong>SHARES</strong></label>
+        <input type="text" class="form-control col-md-6" placeholder="Quantity">
+      </div>
+      <!-- form-group end.// -->
+      <div class="col form-group">
+        <label><strong>PRICE</strong></label>
+        <input type="text" class="form-control col-md-6" placeholder="Market">
+      </div>
+      <!-- form-group end.// -->
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <button type="button" class="btn btn-primary">BUY</button>
+      </div>
+      <div class="col-6">
+        <button type="button" class="btn btn-danger">SELL</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12"><br><h5>Holdings: fake 10000 shares</h5></div>     
+    </div>
+  </center>
+  <div class="row">
+      <div class="col-6"><br><h6><strong>Sector</strong>: {{sector}}</h6></div>     
+      <div class="col-6"><br><h6><strong>Previous Close</strong>: {{previousClose}}</h6></div> 
+      <div class="col-6"><br><h6><strong>Open</strong>: {{open}}</h6></div>     
+      <div class="col-6"><br><h6><strong>Close</strong>: {{close}}</h6></div> 
+      <div class="col-6"><br><h6><strong>High</strong>: {{high}}</h6></div>     
+      <div class="col-6"><br><h6><strong>Low</strong>: {{low}}</h6></div>
+      <div class="col-6"><br><h6><strong>Latest Volume</strong>: {{latestVolume}}</h6></div>     
+      <div class="col-6"><br><h6><strong>Change Percent</strong>: {{changePercent}}</h6></div> 
+      <div class="col-6"><br><h6><strong>Avg Total Volume</strong>: {{avgTotalVolume}}</h6></div>     
+      <div class="col-6"><br><h6><strong>Market Cap</strong>: {{marketCap}}</h6></div> 
+      <div class="col-6"><br><h6><strong>PE Ratio</strong>: {{peRatio}}</h6></div>     
+      <div class="col-6"><br><h6><strong>52 Week High</strong>: {{week52High}}</h6></div> 
+      <div class="col-6"><br><h6><strong>52 Week Low</strong>: {{week52Low}}</h6></div>     
+      <div class="col-6"><br><h6><strong>YTD Change</strong>: {{ytdChange}}</h6></div>
+ 
+  </div>
+</div>

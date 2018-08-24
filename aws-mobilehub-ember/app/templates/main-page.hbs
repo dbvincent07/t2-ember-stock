@@ -1,0 +1,41 @@
+{{#carousel-container transitionInterval=400 as |ui controls|}}
+  <div class="carousel-body">
+     {{#each model as |stock|}} 
+    {{#ui.item}}          
+        {{stock-template symbol=stock.symbol 
+          companyName=stock.companyName 
+          primaryExchange=stock.primaryExchange 
+          latestPrice=stock.latestPrice 
+          change=stock.change
+          iexBidPrice=stock.iexBidPrice
+          iexBidSize=stock.iexBidSize
+          iexAskPrice=stock.iexAskPrice
+          iexAskSize=stock.iexAskSize
+          
+          sector=stock.sector
+          open=stock.open 
+          close=stock.close
+          high=stock.high
+          low=stock.low 
+          latestVolume=stock.latestVolume 
+          previousClose=stock.previousClose 
+          changePercent=stock.changePercent 
+          avgTotalVolume=stock.avgTotalVolume 
+          marketCap=stock.marketCap 
+          peRatio=stock.peRatio 
+          week52High=stock.week52High 
+          week52Low=stock.week52Low 
+          ytdChange=stock.ytdChange
+          }}        
+    {{/ui.item}}
+     {{/each}}
+  </div>
+  <center>
+  <button onclick={{controls.previous}}>
+    Slide Left
+  </button>
+  <button onclick={{controls.next}}>
+    Slide Right
+  </button>
+  </center>
+{{/carousel-container}}

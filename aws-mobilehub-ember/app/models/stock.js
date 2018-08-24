@@ -1,0 +1,27 @@
+import DS from 'ember-data';
+
+export default DS.Model.extend({
+    symbol: DS.attr('string'),
+    companyName: DS.attr('string'), 
+    primaryExchange: DS.attr('string'), 
+    latestPrice: DS.attr('string'), 
+    change: DS.attr('string'),
+    iexBidPrice: DS.attr('string'), 
+    iexBidSize: DS.attr('string'), 
+    iexAskPrice: DS.attr('string'), 
+    iexAskSize: DS.attr('string'),
+    sector: DS.attr('string'),
+    open: DS.attr('string'),
+    close: DS.attr('string'),
+    high: DS.attr('string'),
+    low: DS.attr('string'),
+    latestVolume: DS.attr('string'),
+    previousClose: DS.attr('string'),
+    changePercent: DS.attr('string'),
+    avgTotalVolume: DS.attr('string'),
+    marketCap: DS.attr('string'),
+    peRatio: DS.attr('string'),
+    week52High: DS.attr('string'),
+    week52Low: DS.attr('string'),
+    ytdChange: DS.attr('string'),
+});
